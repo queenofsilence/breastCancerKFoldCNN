@@ -43,7 +43,7 @@ def get_script_path():
 
 def read_lable():
     url = get_script_path()
-    print(url)
+    #print(url)
     filename = url+'\\all-mias\\Info.txt'
     text_all = open(filename).read()
     #print(text_all)

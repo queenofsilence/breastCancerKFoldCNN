@@ -32,6 +32,7 @@ class Data:
         return [X,Y]
 
     def kfold_Split(self, n_split, epoch):
+        counter = 1
         for train_index,test_index in KFold(n_split).split(self.X):
             x_train,x_test = self.X[train_index],self.X[test_index]
             y_train,y_test = self.Y[train_index],self.Y[test_index]
@@ -44,5 +45,6 @@ class Data:
             model = first.createModel()
             print("Begin Training...")
             # Train Model using 
-            first.TrainModel(model, x_train, y_train, epoch) # n epoch
+            first.TrainModel(model, x_train, y_train, epoch, counter) # n epoch
             print('Model evaluation ', model.evaluate(x_test,y_test))
+            counter += 1

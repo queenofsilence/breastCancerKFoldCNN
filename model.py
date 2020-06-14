@@ -45,6 +45,6 @@ class Model:
         #model.compile(optimizer='adam', loss='binary_crossentropy', metrics=[tf.keras.metrics.Accuracy()])#,    tf.keras.metrics.CosineSimilarity(), tf.keras.metrics.LogCoshError()])
         return model
 
-    def TrainModel(self, model, x_train, y_train, epochs):
+    def TrainModel(self, model, x_train, y_train, epochs, counter):
         history = model.fit(x_train, y_train,epochs=epochs, batch_size=32)
-        save_dictionary('history1.dat', history.history)
+        save_dictionary('histories\history'+counter+'.dat', history.history)
