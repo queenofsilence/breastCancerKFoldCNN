@@ -1,0 +1,9 @@
+.idea
+.mypy_cache
+.vscode
+all-mias
+all-mias\*
+breast_cance_model.h5
+history1.dat
+TestBreastCancer.zip
+__pycache__
